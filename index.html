@@ -81,8 +81,23 @@ p   {
 	color: #778899;
     padding: 2px;
 
+    div2.negative { color : red; }
+    div2.positive { color : green; }
 }
 </style>
+
+    <script language="JavaScript" type="text/javascript">
+    <!--
+    function MakeNegative() {
+        TDs = document.getElementsByTagName('div2');
+        for (var i=0; i<TDs.length; i++) {
+                var temp = TDs[i];
+                if (temp.firstChild.nodeValue.indexOf('-') == 0) temp.className = "negative";
+            }
+    }
+    //-->
+    </script>
+
 </head>
 <body>
 
@@ -135,16 +150,21 @@ p   {
 <hr>
 
 <br>
-<div class=report>PRICE is <font color=black>0.0733</font></div>
-<div class=report>PERCENTAGE is <font color=black>0.2700</font></div>
-<div class=report>EQUITY is <font color=black>509.857</font></div>
+<div class=report>PRICE is <font color=black>0.0732</font></div>
+<div class=report>PERCENTAGE is <font color=black>0.1400</font></div>
+<div class=report>EQUITY is <font color=black>509.202</font></div>
 <div class=report>YOUR CASH is <font color=black>29.87</font></div>
 <div class=report>COST is - $ <font color=black>498.86   </font></div>
-<div class=report>PROFIT is - $ <font color=green>-18.87</font></div>
+<div class=report>PROFIT is - $ <div2 class="positive negative">-19.53</div2></div>
 <div class=report>25% SELLING THRESHOLD is - $ <font color=black>124.7150</font></div>
 <div class=report>QTY OF COINS - <font color=#6495ED>6548</font></div> 
 <div class=report>PRICE AVG -  <font color=black>0.0762</font></div> 
 
+    <script language="JavaScript" type="text/javascript">
+  <!--
+   MakeNegative();
+  //-->
+    </script>
 
 </body>
 </html>
